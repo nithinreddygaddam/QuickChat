@@ -1,0 +1,6 @@
+framework module Pods_Quick_ChatTests {
+  umbrella header "Pods-Quick ChatTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
