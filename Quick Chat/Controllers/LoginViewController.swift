@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtPassword: UITextField!
@@ -19,6 +19,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationController?.isNavigationBarHidden = true
+        
+        txtEmail.delegate = self
+        txtPassword.delegate = self
     }
     
     
@@ -180,6 +183,13 @@ class LoginViewController: UIViewController {
         alert.addAction(retryAction)
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.txtEmail.resignFirstResponder()
+        self.txtPassword.resignFirstResponder()
+        return true
+    }
+
 }
 
 
