@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import JSQMessagesViewController
 
 var group:Bool = false
 //var privateChatID = ""
